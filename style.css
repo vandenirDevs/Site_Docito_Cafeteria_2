@@ -42,6 +42,12 @@ h2.titulo{
     color: #84634b;
 }
 
+.button:hover{
+    box-shadow: 0px 0px 8px #ff90a3;
+    transform: scale(1.05);
+
+}
+
 /* ESTILO DO CABEÇALHO */
 
 header{
@@ -85,11 +91,7 @@ header img{
 }
 
 
-.btn-contato button:hover{
-    box-shadow: 0px 0px 8px #ff90a3;
-    transform: scale(1.05);
 
-}
 
 
 
@@ -223,4 +225,61 @@ section.especialidades .flex{
 
     border-radius: 50%;
     z-index: 999;
+}
+
+/*estilo do sobre*/
+
+section.sobre{
+    padding: 80px 4%;
+}
+
+.img-sobre img{
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #84634b;
+}
+
+.sobre .txt-sobre h2{
+    color: #fe8499;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span{
+    color: #84634b;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #ff90a3;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #84634b;
+    background-color: #ff90a3;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    margin: 20px 5px;
+}
+.sobre .txt-sobre .btn-social button:hover{
+    box-shadow: 0px 0px 8px #ff90a3;
+    transform: scale(1.05);
 }
