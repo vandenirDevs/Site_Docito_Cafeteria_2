@@ -511,6 +511,12 @@ footer .line-footer p a{
         display: none; /* Esconde o botão Instagram em mobile para simplificar */
     }
 
+    .txt-topo-site .btn-contato {
+        display: block; /* Mostra o botão "Faça seu Pedido" na seção topo */
+        text-align: center;
+        margin-top: 20px;
+    }
+
     #nav-menu {
         display: none;
     }
