@@ -11,6 +11,10 @@ body{
     height: 100vh;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .flex{
     display: flex;
 }
@@ -42,7 +46,7 @@ h2.titulo{
     color: #84634b;
 }
 
-.button:hover{
+.button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #ff90a3;
     transform: scale(1.05);
 
@@ -266,7 +270,7 @@ section.sobre .flex{
     text-align: justify;
 }
 
-.sobre .txt-sobre .btn-social button{
+.btn-social button{
     width: 60px;
     height: 60px;
     font-size: 22px;
@@ -279,7 +283,461 @@ section.sobre .flex{
     transition: .2s;
     margin: 20px 5px;
 }
-.sobre .txt-sobre .btn-social button:hover{
+.btn-social button:hover{
     box-shadow: 0px 0px 8px #ff90a3;
     transform: scale(1.05);
+}
+
+
+/*estilo do portifólio*/
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px #ff90a33d;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+section.portifolio .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+/*estilo do formulário de contato*/
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #fe84981c;
+    border: 0;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #84634b;
+    font-size: 18px;
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: #fe8499;
+}
+
+ form textarea{
+    height: 200px;
+    resize: none;
+ }
+
+ form .btn-enviar{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+ }
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #ff90a3;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* footer */
+footer{
+    padding: 20px 4%;
+    box-shadow: 0px 0px 40px 10px #ff90a33d;
+}
+
+footer img{
+    width: 100px;
+    height: 140px;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0px;
+}
+
+.borda{
+    border-top: 2px solid #fe8499;
+}
+
+footer .line-footer p i{
+    color: #84634b;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fe8499;
+}
+
+/* ESTILOS PARA MENU HAMBÚRGUER */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fe8499;
+    margin: 3px 0;
+    transition: 0.3s;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+#nav-menu {
+    display: block;
+}
+
+#nav-menu.active {
+    display: block;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+
+/* Para tablets e celulares grandes (até 1024px) */
+@media screen and (max-width: 1024px) {
+    .interface {
+        margin: 0 40px;
+    }
+
+    header nav ul li {
+        padding: 0 20px;
+    }
+
+    section.topo-do-site .flex {
+        gap: 60px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 40px;
+    }
+
+    .img-topo-site img {
+        width: 200px;
+        height: 200px;
+    }
+
+    section.especialidades .flex {
+        gap: 30px;
+    }
+
+    .especialidades .especialidades-box {
+        padding: 30px;
+    }
+
+    section.sobre .flex {
+        gap: 40px;
+    }
+
+    .img-sobre img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 32px;
+    }
+
+    section.portifolio .flex {
+        gap: 40px;
+    }
+
+    .img-port {
+        width: 300px;
+        height: 380px;
+    }
+}
+
+/* Para celulares (até 768px) */
+@media screen and (max-width: 768px) {
+    .interface {
+        margin: 0 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        order: 2; /* Coloca o hambúrguer à direita */
+    }
+
+    .logo {
+        order: 1; /* Logo à esquerda */
+    }
+
+    .btn-contato {
+        display: none; /* Esconde o botão Instagram em mobile para simplificar */
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.active {
+        display: block;
+        position: absolute;
+        top: calc(100% - 55px); /* 55px mais perto do hambúrguer */
+        right: 20px; /* Alinha ao canto direito */
+        width: 200px;
+        background-color: #feecef;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    #nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-menu ul li {
+        margin: 0;
+        padding: 10px 20px;
+        border-bottom: 1px solid #fe8499;
+    }
+
+    #nav-menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    #nav-menu ul li a {
+        color: #84634b;
+        text-decoration: none;
+        display: block;
+    }
+
+    header > .interface {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    header img {
+        width: 120px;
+        height: 156px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 4%;
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        text-align: center;
+    }
+
+    .img-topo-site img {
+        width: 180px;
+        height: 180px;
+    }
+
+    section.especialidades {
+        padding: 20px 4%;
+    }
+
+    section.especialidades .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .especialidades .especialidades-box {
+        padding: 20px;
+    }
+
+    .especialidades .especialidades-box i {
+        font-size: 50px;
+    }
+
+    .especialidades .especialidades-box h3 {
+        font-size: 18px;
+    }
+
+    section.sobre {
+        padding: 40px 4%;
+    }
+
+    section.sobre .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .img-sobre img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .sobre .txt-sobre p {
+        text-align: center;
+    }
+
+    section.portifolio {
+        padding: 40px 4%;
+    }
+
+    section.portifolio .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .img-port {
+        width: 100%;
+        height: 300px;
+    }
+
+    section.formulario {
+        padding: 40px 4%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    footer .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer img {
+        width: 80px;
+        height: 112px;
+    }
+
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Para celulares pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+    .interface {
+        margin: 0 10px;
+    }
+
+    h2.titulo {
+        font-size: 28px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 28px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    .img-topo-site img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .especialidades .especialidades-box i {
+        font-size: 40px;
+    }
+
+    .especialidades .especialidades-box h3 {
+        font-size: 16px;
+    }
+
+    .especialidades .especialidades-box p {
+        font-size: 14px;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 24px;
+    }
+
+    .sobre .txt-sobre p {
+        font-size: 14px;
+    }
+
+    .btn-social button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 10px 5px;
+    }
+
+    .img-port {
+        height: 250px;
+    }
+
+    form input, form textarea {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+
+    form .btn-enviar input {
+        width: 100px;
+    }
+
+    footer .line-footer p i {
+        font-size: 18px;
+    }
 }
