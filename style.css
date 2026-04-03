@@ -329,6 +329,11 @@ section.localizacao .flex-mapa{
     text-align: justify;
 }
 
+.btn-localizacao {
+    display: inline-block;
+    text-decoration: none;
+}
+
 .btn-localizacao button{
     padding: 12px 40px;
     font-size: 16px;
