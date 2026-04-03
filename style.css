@@ -290,6 +290,64 @@ section.sobre .flex{
 }
 
 
+/*estilo da seção localização*/
+section.localizacao{
+    padding: 80px 4%;
+}
+
+section.localizacao .flex-mapa{
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.mapa-container{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px #ff90a3;
+}
+
+.info-localizacao{
+    max-width: 400px;
+    color: #84634b;
+}
+
+.info-localizacao h3{
+    color: #fe8499;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info-localizacao p{
+    font-size: 16px;
+    line-height: 28px;
+    color: #ff90a3;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.btn-localizacao button{
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #fe8499;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 20px;
+}
+
+.btn-localizacao button:hover{
+    box-shadow: 0px 0px 15px #fe8499;
+    transform: scale(1.05);
+}
+
+
 /*estilo do portifólio*/
 section.portifolio{
     padding: 80px 4%;
@@ -397,6 +455,30 @@ footer .line-footer p a{
     color: #fe8499;
 }
 
+.flex-footer-bottom {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-footer-bottom p {
+    color: #84634b;
+    font-size: 14px;
+    margin: 5px 10px;
+}
+
+.link-whats {
+    color: #25d366;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.link-whats:hover {
+    color: #1fa853;
+    text-decoration: underline;
+}
+
 /* ESTILOS PARA MENU HAMBÚRGUER */
 
 .hamburger {
@@ -490,6 +572,22 @@ footer .line-footer p a{
     .img-port {
         width: 300px;
         height: 380px;
+    }
+
+    section.localizacao .flex-mapa {
+        gap: 30px;
+    }
+
+    .mapa-container {
+        max-width: 400px;
+    }
+
+    .info-localizacao {
+        max-width: 350px;
+    }
+
+    .info-localizacao h3 {
+        font-size: 24px;
     }
 }
 
@@ -652,6 +750,33 @@ footer .line-footer p a{
         height: 300px;
     }
 
+    section.localizacao {
+        padding: 40px 4%;
+    }
+
+    section.localizacao .flex-mapa {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mapa-container {
+        max-width: 100%;
+    }
+
+    .info-localizacao {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .info-localizacao h3 {
+        font-size: 22px;
+    }
+
+    .btn-localizacao {
+        display: flex;
+        justify-content: center;
+    }
+
     section.formulario {
         padding: 40px 4%;
     }
@@ -669,6 +794,17 @@ footer .line-footer p a{
     footer img {
         width: 80px;
         height: 112px;
+    }
+
+    .flex-footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .flex-footer-bottom p {
+        font-size: 12px;
+        margin: 5px 0;
     }
 
     .whatsapp {
@@ -746,5 +882,22 @@ footer .line-footer p a{
 
     footer .line-footer p i {
         font-size: 18px;
+    }
+
+    .info-localizacao h3 {
+        font-size: 20px;
+    }
+
+    .info-localizacao p {
+        font-size: 13px;
+    }
+
+    .mapa-container iframe {
+        height: 350px !important;
+    }
+
+    .btn-localizacao button {
+        padding: 10px 30px;
+        font-size: 14px;
     }
 }
